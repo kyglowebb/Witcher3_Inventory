@@ -238,4 +238,13 @@ app.get('/addtable4item5', (req, res) => {
 		res.send('Item5 for table4 created')
 })
 
+app.get('/addtable5item1', (req, res) => {
+	let alchemy = {product_name='Battle Axe', size_code='1.76', effect_code'1% critical hit chance
+22 armor piercing', product_id='12345'};
+	let sql = 'INSERT INTO Alchemy Ingredients ?';
+	let query = db.query(sql, alchemy,(err, result) => {
+		if(err) throw err;
+		res.send('Item1 for table5 created')
+})
+
 //app.listen(3000);
