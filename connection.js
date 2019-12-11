@@ -312,7 +312,7 @@ app.get('/addtable6item4', (req, res) => {
 })
 
 
-app.get('/addtable6item4', (req, res) => {
+app.get('/addtable6item5', (req, res) => {
 	let cc = {product_name='Infused crystal', source_code='loot', value_code'120', product_id='34557'};
 	let sql = 'INSERT INTO Crafting Components ?';
 	let query = db.query(sql, cc,(err, result) => {
@@ -320,4 +320,46 @@ app.get('/addtable6item4', (req, res) => {
 		res.send('Item5 for table6 created')
 })
 
+
+app.get('/addtable7item1', (req, res) => {
+	let ch = {product_name='First Weapon', size_code='', damage_code'', product_id='12348'};
+	let sql = 'INSERT INTO Geralt ?';
+	let query = db.query(sql, ch,(err, result) => {
+		if(err) throw err;
+		res.send('Item1 for table7 created')
+})
+
+
+app.get('/addtable7item2', (req, res) => {
+	let ch = {product_name='Quest Items', size_code='', damage_code'', product_id='46782'};
+	let sql = 'INSERT INTO Geralt ?';
+	let query = db.query(sql, ch,(err, result) => {
+		if(err) throw err;
+		res.send('Item2 for table7 created')
+})
+
+app.get('/addtable7item3', (req, res) => {
+	let ch = {product_name='Armor', size_code='', damage_code'', product_id='91236'};
+	let sql = 'INSERT INTO Geralt ?';
+	let query = db.query(sql, ch,(err, result) => {
+		if(err) throw err;
+		res.send('Item3 for table7 created')
+})
+
+app.get('/addtable7item4', (req, res) => {
+	let ch = {product_name='Alchemy', size_code='', damage_code'', product_id='32799'};
+	let sql = 'INSERT INTO Geralt ?';
+	let query = db.query(sql, ch,(err, result) => {
+		if(err) throw err;
+		res.send('Item4 for table7 created')
+})
+
+
+app.get('/addtable7item5', (req, res) => {
+	let ch = {product_name='Crafting Components', size_code='', damage_code'', product_id='63726'};
+	let sql = 'INSERT INTO Geralt ?';
+	let query = db.query(sql, ch,(err, result) => {
+		if(err) throw err;
+		res.send('Item5 for table7 created')
+})
 //app.listen(3000);
