@@ -8,17 +8,8 @@
 
 /* Create two unequal columns that floats next to each other */
 .column {
-  float: left;
   padding: 10px;
-  height: 500px; /* Should be removed. Only for demonstration */
-}
-
-.left {
-  width: 15%;
-}
-
-.right {
-  width: 85%;
+  height: 1000px; /* Should be removed. Only for demonstration */
 }
 
 /* Clear floats after the columns */
@@ -94,32 +85,45 @@ body {
 
 <div class="topnav">
   <a class="active" href="main.html">Home</a>
-  <a href="leave.html">About</a>
+  <a href="contact.html">Contact</a>
   <a href="inventory.html">Inventory</a>
   <input type="text" placeholder="Search..">
 </div>
 
+
 <!-- top of two columns -->
 
 <div class="row">
-  <div class="column left" style="background-color:#aaa;">
-    <h2>Witcher 3 Inventory</h2>
-    <p>Use search bar to find items.</p>
-  </div>
   <div class="column right" style="background-color:#bbb;">
     <h2>Inventory Items</h2>
-    <p>Below is a list of inventory items</p>
+    <h3>Armor:</h3>
+    <p>Angrbenian Cuirass</p>
+    <p>Enhanced Legendary Feline Armor</p>
+
+    <h3>Weapons:</h3>
+    <p>Battle Axe</p>
+    <p>Cross Bow</p>
+
+    <h3>Quest Items:</h3>
+    <p>Albino Bruxa Tongue</p>
+    <p>Agate</p>
+
+    <h3>Trophies:</h3>
+    <p>Ekhidna Trophy</p>
+    <p>Griffin Trophy</p>
+
+    <h3>Alchemy Ingredients:</h3>
+    <p>Angrbenian Cuirass</p>
+    <p>Enhanced Legendary Feline Armor</p>
+
+    <h3>Crafting Components:</h3>
+    <p>Black Pearl</p>
+    <p>Diamond</p>
   </div>
 </div>
 
-<!-- bottom of two columns -->
 
-<div style="padding-left:16px">
-  <h2>Responsive Search Bar</h2>
-  <p>Navigation bar with a search box inside of it.</p>
-  <p>Resize the browser window to see the responsive effect.</p>
-  <p>For more examples on how to add a submit button and icon inside the search bar, go back to the tutorial.</p>
-</div>
+<!-- bottom of two columns -->
 
 </body>
 </html>
