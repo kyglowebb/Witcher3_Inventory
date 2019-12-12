@@ -3,7 +3,7 @@
     [
         {
             // connection 1
-            "server": "S2",
+            "server": "witcher3",
             "database": "witcher3",
             "user": "localhost",
             "password": "pass123"
