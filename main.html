@@ -109,18 +109,19 @@ body {
         $mysqli = NEW MYSQLi("localhost", "root", "", "sampleDB");
         $resultSet = $mysqli - query("SELECT product_name FROM Armor");
     ?>
-    <select id="armor">
+    <select id="armor", style="width: 200px;">
     <?php
         while($row = $resultSet->fetch_assoc())
         {
 	        product_name = $rows['product_name'];
-	        echo "<option value='Please select an option for Armor'>Select Armor</option>";
+	        echo "<option value='Please select an option'>Select Armor</option>";
             echo "<option value='Angrbenian Cuirass'>Angrbenian Cuirass</option>";
             echo "<option value='Enhanced Legendary Feline'>Enhanced Legendary Feline</option>";
             echo "<option value='Griffin Armor'>Griffin Armor</option>";
         {
     ?>
     </select>
+    <button onclick="deleteArmor()">Delete Armor</button>
     <br />
     <br />
     <br />
@@ -128,18 +129,18 @@ body {
         $mysqli = NEW MYSQLi("localhost", "root", "", "sampleDB");
         $resultSet = $mysqli - query("SELECT product_name FROM Armor");
     ?>
-    <select id="weapons">
+    <select id="weapons", style="width: 200px;">
     <?php
         while($row = $resultSet->fetch_assoc())
         {
 	        product_name = $rows['product_name'];
-	        echo "<option value='Please select an option for Weapon'>Select Weapon</option>";
+	        echo "<option value='Please select an option'>Select Weapon</option>";
             echo "<option value='Battle Axe'>Battle Axe</option>";
             echo "<option value='CrossBow'>CrossBow</option>";
             echo "<option value='Heavy Mace'>Heavy Mace</option>";
         {
     ?>
-    </select>
+    </select> <button onclick="deleteWeapon()">Delete Weapon</button>
     <br />
     <br />
     <br />
@@ -147,18 +148,18 @@ body {
         $mysqli = NEW MYSQLi("localhost", "root", "", "sampleDB");
         $resultSet = $mysqli - query("SELECT product_name FROM Armor");
     ?>
-    <select id="quests">
+    <select id="quests", style="width: 200px;">
     <?php
         while($row = $resultSet->fetch_assoc())
         {
 	        product_name = $rows['product_name'];
-	        echo "<option value='Please select an option for Quest Item'>Select Quest Item</option>";
+	        echo "<option value='Please select an option'>Select Quest Item</option>";
             echo "<option value='Albino Bruxa Tongue'>Albino Bruxa Tongue</option>";
             echo "<option value='Agate'>Agate</option>";
             echo "<option value='Bird Mask'>Bird Mask</option>";
         {
     ?>
-    </select>
+    </select> <button onclick="deleteQuest()">Delete Quest</button>
     <br />
     <br />
     <br />
@@ -166,18 +167,18 @@ body {
         $mysqli = NEW MYSQLi("localhost", "root", "", "sampleDB");
         $resultSet = $mysqli - query("SELECT product_name FROM Armor");
     ?>
-    <select id="trophies">
+    <select id="trophies", style="width: 200px;">
     <?php
         while($row = $resultSet->fetch_assoc())
         {
 	        product_name = $rows['product_name'];
-	        echo "<option value='Please select an option for Trophy'>Select Trophy</option>";
+	        echo "<option value='Please select an option'>Select Trophy</option>";
             echo "<option value='Ekhidna'>Ekhidna</option>";
             echo "<option value='Griffin'>Griffin</option>";
             echo "<option value='Leshen'>Leshen</option>";
         {
     ?>
-    </select>
+    </select> <button onclick="deleteTrophy()">Delete Trophy</button>
     <br />
     <br />
     <br />
@@ -185,18 +186,18 @@ body {
         $mysqli = NEW MYSQLi("localhost", "root", "", "sampleDB");
         $resultSet = $mysqli - query("SELECT product_name FROM Armor");
     ?>
-    <select id="alchemy">
+    <select id="alchemy", style="width: 200px;">
     <?php
         while($row = $resultSet->fetch_assoc())
         {
 	        product_name = $rows['product_name'];
-	        echo "<option value='Please select an option for Alchemy Ingredients'>Select Alchemy Ingredients</option>";
+	        echo "<option value='Please select an option'>Select Alchemy Ingredients</option>";
             echo "<option value='Arachas Eyes'>Arachas Eyes</option>";
             echo "<option value='Chort Hide'>Chort Hide</option>";
             echo "<option value='Leshen Resin'>Leshen Resin</option>";
         {
     ?>
-    </select>
+    </select> <button onclick="deleteAlchemy()">Delete Alchemy</button>
     <br />
     <br />
     <br />
@@ -204,23 +205,22 @@ body {
         $mysqli = NEW MYSQLi("localhost", "root", "", "sampleDB");
         $resultSet = $mysqli - query("SELECT product_name FROM Armor");
     ?>
-    <select id="crafting">
+    <select id="crafting", style="width: 200px;">
     <?php
         while($row = $resultSet->fetch_assoc())
         {
 	        product_name = $rows['product_name'];
-	        echo "<option value='Please select an option for Crafting Components'>Select Crafting Components</option>";
+	        echo "<option value='Please select an option'>Select Crafting Components</option>";
             echo "<option value='Black Pearl'>Black Pearl</option>";
             echo "<option value='Diamond'>Diamond</option>";
             echo "<option value='Dragon Scales'>Dragon Scales</option>";
         {
     ?>
-    </select>
+    </select> <button onclick="deleteCrafting()">Delete Crafting</button>
     <br />
     <br />
     <p align="right">
         <button onclick="getOption()">Add</button>
- 
     </p>
   </div>
   <div class="column right" style="background-color:#bbb;">
@@ -230,7 +230,7 @@ body {
         <br />
         <br />
         <br />
-        <b>Armor:</b><span class="armor"></span>
+        <b>Armor:</b> <span class="armor"></span>
         <br />
         <br />
         <br />
@@ -238,67 +238,78 @@ body {
         <br />
         <br />
         <br />
-        <b>Quest Item:</b> <span class="quests"></span>
+        <b>Quest Item:</b> <span class="quests"></span> 
         <br />
         <br />
         <br />
-        <b>Trophy:</b> <span class="trophies"></span>
+        <b>Trophy:</b> <span class="trophies"></span> 
         <br />
         <br />
         <br />
-        <b>Alchemy Ingredient:</b> <span class="alchemy"></span>
+        <b>Alchemy Ingredient:</b> <span class="alchemy"></span> 
         <br />
         <br />
         <br />
-        <b>Crafting Component:</b><span class="crafting"></span>
+        <b>Crafting Component:</b> <span class="crafting"></span>
         <br />
     </p> 
-      
+    <br />  
     <script type="text/javascript"> 
         function getOption() { 
-            selectArmor =  
-                    document.querySelector('#armor'); 
+            selectArmor = document.querySelector('#armor'); 
             armor = selectArmor.value; 
-            document.querySelector('.armor').textContent 
-                    = armor;
+            document.querySelector('.armor').textContent = armor;
             
-            selectWeapon =  
-                    document.querySelector('#weapons'); 
+            selectWeapon = document.querySelector('#weapons'); 
             weapons = selectWeapon.value; 
-            document.querySelector('.weapons').textContent 
-                    = weapons;
+            document.querySelector('.weapons').textContent = weapons;
 
-            selectQuest =  
-                    document.querySelector('#quests'); 
+            selectQuest = document.querySelector('#quests'); 
             quests = selectQuest.value; 
-            document.querySelector('.quests').textContent 
-                    = quests;
+            document.querySelector('.quests').textContent = quests;
 
-            selectTrophy =  
-                    document.querySelector('#trophies'); 
+            selectTrophy = document.querySelector('#trophies'); 
             trophy = selectTrophy.value; 
-            document.querySelector('.trophies').textContent 
-                    = trophy;
+            document.querySelector('.trophies').textContent = trophy;
 
-            selectAlchemy =  
-                    document.querySelector('#alchemy'); 
+            selectAlchemy = document.querySelector('#alchemy'); 
             alchemy = selectAlchemy.value; 
-            document.querySelector('.alchemy').textContent 
-                    = alchemy;
+            document.querySelector('.alchemy').textContent = alchemy;
 
-            selectCrafting =  
-                    document.querySelector('#crafting'); 
+            selectCrafting = document.querySelector('#crafting'); 
             crafting = selectCrafting.value; 
-            document.querySelector('.crafting').textContent 
-                    = crafting;
+            document.querySelector('.crafting').textContent = crafting;
         } 
     </script>
     <p align="right">
         <button type="button">Update</button>
     </p>
-    <p align="right">
-        <button type="button">Delete</button>
-    </p>
+    <script type="text/javascript"> 
+        function deleteArmor() { 
+            armor = null; 
+            document.querySelector('.armor').textContent = armor;
+        }
+        function deleteWeapon() { 
+            weapons = null; 
+            document.querySelector('.weapons').textContent = weapons;
+        }
+        function deleteQuest() { 
+            quests = null; 
+            document.querySelector('.quests').textContent = quests;
+        }
+        function deleteTrophy() { 
+            trophy = null; 
+            document.querySelector('.trophies').textContent = trophy;
+        }
+        function deleteAlchemy() { 
+            alchemy = null; 
+            document.querySelector('.alchemy').textContent = alchemy;
+        }
+        function deleteCrafting() { 
+            crafting = null; 
+            document.querySelector('.crafting').textContent = crafting;
+        }
+    </script>
   </div>
 </div>
 
