@@ -1,0 +1,12 @@
+{
+    "vscode-mssql.connections":
+    [
+        {
+            // connection 1
+            "server": "S2",
+            "database": "witcher3",
+            "user": "localhost",
+            "password": "pass123"
+        }
+    ]
+}
